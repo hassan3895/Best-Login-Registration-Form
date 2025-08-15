@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="welcome-box">
+        <h1 id="welcomeText"></h1>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        let currentUser = localStorage.getItem('currentUser');
+        if(!currentUser){
+            window.location.href = "index.html";
+        } else {
+            document.getElementById("welcomeText").textContent = "Welcome, " + currentUser + "!";
+        }
+
+        function logout(){
+            localStorage.removeItem('currentUser');
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

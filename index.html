@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register & Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="registerForm">
+    <h2>Register</h2>
+    <input type="text" id="regUsername" placeholder="Username">
+    <input type="email" id="regEmail" placeholder="Email">
+
+    <div class="password-container">
+        <input type="password" id="regPassword" placeholder="Password">
+        <span class="eye-icon" onclick="togglePassword('regPassword', this)">👁</span>
+    </div>
+
+    <button onclick="register()">Register</button>
+    <p id="regMessage"></p>
+    <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+</div>
+
+<div id="loginForm" style="display:none;">
+    <h2>Login</h2>
+    <input type="text" id="loginUsername" placeholder="Username or Email">
+
+    <div class="password-container">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <span class="eye-icon" onclick="togglePassword('loginPassword', this)">👁</span>
+    </div>
+
+    <button onclick="login()">Login</button>
+    <p id="loginMessage"></p>
+    <p>Don't have an account? <a href="#" onclick="showRegister()">Register</a></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
